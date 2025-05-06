@@ -1,0 +1,132 @@
+.header {
+    color: white;
+    padding: 10px 20px;
+}
+
+.header__container {
+    display: flex;
+    justify-content: center;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.header__logo {
+    width: 58px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 17px;
+}
+
+.header__title {
+    font-size: 24px;
+    margin-right: 78px;
+    color: #000000;
+}
+
+.header__nav {
+    display: flex;
+    gap: 45px;
+    margin-right: 100px;
+}
+
+.header__nav-item {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header__info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.two-storey-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 70px;
+}
+
+.two-storey-block span {
+    display: block;
+    font-size: 10px;
+    line-height: 1;
+    color: #000000;
+}
+
+.two-storey-block h2 {
+    display: block;
+    font-size: 19px;
+    line-height: 1;
+    color: #000000;
+}
+
+.header__info-online img {
+    height: 24px;
+    margin-right: 5px;
+}
+
+.header__info-socials {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.header__info-socials-link {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.header__info-socials-link-icons {
+    height: 24px;
+}
+
+@media (max-width: 1325px) {
+    .header__content {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .header__logo {
+        margin-right: 10px;
+    }
+
+    .header__title {
+        margin-right: 30px;
+        font-size: 20px;
+    }
+
+    .header__nav {
+        gap: 25px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header__info {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .two-storey-block {
+        margin-right: 30px;
+    }
+
+    .header__info-socials {
+        margin-left: 0;
+        gap: 10px;
+    }
+
+    .header__info-socials-link {
+        margin-right: 10px;
+    }
+}

@@ -1,0 +1,24 @@
+.cart-button {
+    position: absolute;
+    right: 40px;
+    bottom: 46px;
+    border-radius: 50%;
+    background: rgba(255, 202, 64, 1);
+    border: none;
+    padding: 20px;
+    transition: all 0.25s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-button:hover {
+    transform: scale(1.15);
+    background: rgb(211, 166, 53);;
+}
+
+.cart-button__icon {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
