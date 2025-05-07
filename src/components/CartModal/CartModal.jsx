@@ -36,7 +36,7 @@ export default function CartModal({ onClose }) {
                             {cartItems.map(item => (
                                 <div key={item.id} className='cart__list-item'>
                                     <div className='cart--left'>
-                                        <img className='cart__list-icon' src={item.image} alt='icon' />
+                                        {item.image ? <img className='cart__list-icon' src={item.image} alt='icon' /> : <span className='cart__list-icon'>⭐️</span>}
                                         <span className='cart__list-name'>{item.title} — {item.count} шт.</span>
                                     </div>
                                     <div className='cart--right'>

@@ -1,5 +1,5 @@
 import './Products.css';
-import productImageDefault from '../../images/icons/product-image-default.svg';
+// import testImage from '../../images/pictures/main-banner-image.svg';
 
 const sampleProducts = [
     {
@@ -7,14 +7,61 @@ const sampleProducts = [
         title: 'Зiрки (Донат Валюта)',
         price: 10,
         count: 1,
-        image: productImageDefault,
+        // image: testImage,
     },
     {
         id: 2,
         title: 'Зiрки (Донат Валюта)',
         price: 10,
         count: 1,
-        image: productImageDefault,
+    },
+    {
+        id: 3,
+        title: 'Зiрки (Донат Валюта)',
+        price: 10,
+        count: 1,
+    },
+    {
+        id: 4,
+        title: 'Зiрки (Донат Валюта)',
+        price: 10,
+        count: 1,
+    },
+    {
+        id: 5,
+        title: 'Зiрки (Донат Валюта)',
+        price: 10,
+        count: 1,
+    },
+    {
+        id: 6,
+        title: 'Зiрки (Донат Валюта)',
+        price: 10,
+        count: 1,
+    },
+    {
+        id: 7,
+        title: 'Зiрки (Донат Валюта)',
+        price: 10,
+        count: 1,
+    },
+    {
+        id: 8,
+        title: 'Зiрки (Донат Валюта)',
+        price: 10,
+        count: 1,
+    },
+    {
+        id: 9,
+        title: 'Зiрки (Донат Валюта)',
+        price: 10,
+        count: 1,
+    },
+    {
+        id: 10,
+        title: 'Зiрки (Донат Валюта)',
+        price: 10,
+        count: 1,
     },
 ];
 
@@ -39,19 +86,19 @@ export default function Products({ setCountNewProductsInCart }) {
                 <h2 className='products__block-title'>Каталог товарiв</h2>
                 <div className='product--inline'>
                     <button className='products__category category--active'>Категория</button>
-                    <button className='products__category category--active'>Категория</button>
-                    <button className='products__category category--active'>Категория</button>
-                    <button className='products__category category--active'>Категория</button>
-                    <button className='products__category category--active'>Категория</button>
-                    <button className='products__category category--active'>Категория</button>
-                    <button className='products__category category--active'>Категория</button>
-                    <button className='products__category category--active'>Категория</button>
+                    <button className='products__category'>Категория</button>
+                    <button className='products__category'>Категория</button>
+                    <button className='products__category'>Категория</button>
+                    <button className='products__category'>Категория</button>
+                    <button className='products__category'>Категория</button>
+                    <button className='products__category'>Категория</button>
+                    
                 </div>
                 <div className='products__list'>
                     {sampleProducts.map((product) => (
                         <div key={product.id} className='products__list-item'>
                             <div className='product__image-border'>
-                                <img className='product__image' src={product.image} alt='product' />
+                                {product.image ? <img className='product__image' src={product.image} alt='product' /> : <span className='product__image'>⭐️</span>}
                             </div>
                             <h2 className='product__title'>{product.title}</h2>
                             <div className='product--inline'>

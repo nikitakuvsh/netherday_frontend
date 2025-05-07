@@ -63,6 +63,10 @@
     margin-bottom: 23px;
 }
 
+.cart__list-icon {
+    font-size: 30px;
+}
+
 .cart--left {
     display: flex;
     align-items: center;

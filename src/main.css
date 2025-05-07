@@ -19,9 +19,3 @@ html, body {
 button {
     cursor: pointer;
 }
-
-.fixed-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}

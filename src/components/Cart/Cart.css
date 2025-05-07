@@ -5,7 +5,7 @@
 .cart-button {
     position: absolute;
     right: 40px;
-    bottom: 0px;
+    bottom: 46px;
     border-radius: 50%;
     background: rgba(255, 202, 64, 1);
     border: none;
@@ -30,13 +30,13 @@
 .count-products {
     position: absolute;
     top: -5px;
-    right: -5px;
-    background-color: red;
+    right: -2px;
+    background-color: rgb(158, 108, 14);
     color: white;
     font-size: 12px;
     font-weight: bold;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     display: flex;
     align-items: center;
