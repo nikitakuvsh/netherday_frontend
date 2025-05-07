@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import CartModal from '../CartModal/CartModal';
 import './Header.css';
 import headerLogo from '../../images/icons/logo.svg';
 import headerInfoOnline from '../../images/icons/online-icon.svg';
@@ -5,6 +7,28 @@ import discordIcon from '../../images/icons/discord-icon.svg';
 import telegramIcon from '../../images/icons/telegram-icon.svg';
 
 export default function Header(){
+
+    const [isCartModalOpen, setIsCartModalOpen] = useState(false);
+    const [copied, setCopied] = useState(false);
+
+    const serverIp = 'mc.nether.day';
+
+    const handleCopyIp = (serverIp) => {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(serverIp)
+                .then(() => {
+                    setCopied(true);
+                    setTimeout(() => setCopied(false), 2000);
+                })
+                .catch(err => {
+                    console.error('Ошибка при копировании IP:', err);
+                });
+        } else {
+            console.warn('Clipboard API недоступен');
+        }
+        
+    };
+
     return (
         <header className='header'>
             <div className='header__container'>
@@ -15,12 +39,13 @@ export default function Header(){
                         <a className='header__nav-item' href='#'>Правила</a>
                         <a className='header__nav-item' href='#'>Пiдтримка</a>
                         <a className='header__nav-item' href='#'>Поповнити баланс</a>
-                        <a className='header__nav-item' href='#'>Корзина</a>
+                        <button className='header__nav-item' onClick={() => setIsCartModalOpen(true)} style={{paddingBottom: '0'}}>Корзина</button>
                     </div>
                     <div className='header__info'>
-                        <div className='header__info-ip two-storey-block'>
+                        <div className='header__info-ip two-storey-block' onClick={() => handleCopyIp(serverIp)}>
                             <span className='header__info-ip--text'>IP адрес серверу</span>
-                            <h2 className='header__info-ip--ip'>mc.nether.day</h2>
+                            <h2 className='header__info-ip--ip'>{serverIp}</h2>
+                            {copied && <span className='copy-tooltip'>Скопировано!</span>}
                         </div>
 
                         <img className='header__info-online-image' src={headerInfoOnline} alt='online' title='online' />
@@ -41,6 +66,8 @@ export default function Header(){
                     </div>
                 </div>
             </div>
+
+            {isCartModalOpen && <CartModal onClose={() => setIsCartModalOpen(false)} />}
         </header>
     );
 }

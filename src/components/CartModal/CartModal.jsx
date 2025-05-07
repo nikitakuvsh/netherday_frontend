@@ -5,7 +5,6 @@ export default function CartModal({ onClose }) {
     const [paymentMethod, setPaymentMethod] = useState('Europe');
     const [cartItems, setCartItems] = useState([]);
 
-    // Загрузка данных из localStorage при открытии модалки
     useEffect(() => {
         const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
         setCartItems(storedCart);
