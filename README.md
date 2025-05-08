@@ -19,3 +19,8 @@ start a dev serv
 ```
 npm start
 ```
+
+get build to prod
+```
+npm build
+```
