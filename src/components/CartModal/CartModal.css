@@ -23,6 +23,12 @@
     animation: slideUp 0.3s ease-in-out;
 }
 
+.cart__modal--no-product {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
 .cart__modal-title {
     margin-top: 0;
     font-size: 22px;
@@ -65,6 +71,9 @@
 
 .cart__list-icon {
     font-size: 30px;
+    max-width: 50px;
+    height: auto;
+    object-fit: cover;
 }
 
 .cart--left {

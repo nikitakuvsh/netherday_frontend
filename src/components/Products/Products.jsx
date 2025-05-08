@@ -1,5 +1,5 @@
 import './Products.css';
-// import testImage from '../../images/pictures/main-banner-image.svg';
+import testImage from '../../images/pictures/main-banner-image.svg';
 
 const sampleProducts = [
     {
@@ -7,7 +7,7 @@ const sampleProducts = [
         title: 'Зiрки (Донат Валюта)',
         price: 10,
         count: 1,
-        // image: testImage,
+        image: testImage,
     },
     {
         id: 2,

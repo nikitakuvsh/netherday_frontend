@@ -29,7 +29,7 @@ export default function CartModal({ onClose }) {
                 <h2 className='cart__modal-title'>Корзина</h2>
                 <div className='cart__modal-content'>
                     {cartItems.length === 0 ? (
-                        <p>У вашому кошику поки немає товарiв.</p>
+                        <p className='cart__modal--no-product'>У вашому кошику поки немає товарiв :(</p>
                     ) : (
                         <div className='cart__list'>
                             {cartItems.map(item => (

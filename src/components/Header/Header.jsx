@@ -10,6 +10,7 @@ export default function Header(){
 
     const [isCartModalOpen, setIsCartModalOpen] = useState(false);
     const [copied, setCopied] = useState(false);
+    const [online, setOnline] = useState('500'); // Сюда данные с бека должны тянуться
 
     const serverIp = 'mc.nether.day';
 
@@ -51,15 +52,15 @@ export default function Header(){
                         <img className='header__info-online-image' src={headerInfoOnline} alt='online' title='online' />
                         <div className='header__info-online two-storey-block'>
                             <span className='header__info-online--text'>Онлайн</span>
-                            <h2 className='header__info-online--online'>500</h2>
+                            <h2 className='header__info-online--online'>{online}</h2>
                         </div>
 
                         <div className='header__info-socials'>
-                            <a className='header__info-socials-link' href='https://discord.com' target='_blank'>
+                            <a className='header__info-socials-link' href='https://dsc.gg/netherday' target='_blank'>
                                 <img className='header__info-socials-link-icons discord--icon' src={discordIcon} alt='discord' title='discord' />
                             </a>
                             
-                            <a className='header__info-socials-link' href='https://telegram.com' target='_blank'>
+                            <a className='header__info-socials-link' href='https://t.me/netherday' target='_blank'>
                                 <img className='header__info-socials-link-icons telegram--icon' src={telegramIcon} alt='telegram' title='telegram' />
                             </a>
                         </div>
