@@ -83,7 +83,7 @@ export default function Products({ setCountNewProductsInCart }) {
         localStorage.setItem('cart', JSON.stringify(cart));
     };
 
-    const categories = ['Категория 1', 'Категория 2', 'Категория 3', 'Категория 4', 'Категория 5', 'Категория 6', 'Категория 7'];
+    const categories = ['Категория', 'Категория', 'Категория', 'Категория', 'Категория', 'Категория', 'Категория'];
 
 
     return (
