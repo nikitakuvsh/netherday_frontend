@@ -3,3 +3,113 @@ footer {
     width: 100%;
     height: 250px;
 }
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 42px;
+    margin-bottom: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.footer__logo {
+    cursor: pointer;
+}
+
+.footer__logo-text {
+    font-weight: 700;
+    font-size: 23.4px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+}
+
+.footer__logo-rights-reserver {
+    font-weight: 500;
+    font-size: 11.19px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    text-wrap: nowrap;
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__nav-item {
+    margin-bottom: 13px;
+    text-wrap: nowrap;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 18.6px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #ffffff;
+}
+
+.footer__nav-item:hover {
+    text-decoration: underline;
+}
+
+.footer__ip {
+    position: relative;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.footer__ip-text {
+    font-weight: 600;
+    font-size: 9px;
+}
+
+.footer__ip-ip {
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.copy-tooltip.footer {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff !important;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px !important;
+    opacity: 0;
+    animation: fadeInOut 2s forwards;
+    pointer-events: none;
+    filter: invert(1);
+}
+
+.footer__social-title {
+    font-weight: 600;
+    font-size: 18.6px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.footer__social-list {
+    display: flex;
+    gap: 15px;
+}
+
+.footer__socials-link-icons {
+    filter: invert(1);
+    width: 100%;
+    max-width: 30px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer__socials-link-icons:hover {
+    transform: scale(1.2);
+    filter: invert(64%) sepia(89%) saturate(748%) hue-rotate(1deg) brightness(105%) contrast(101%);
+}
