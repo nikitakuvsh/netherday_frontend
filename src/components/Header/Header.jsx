@@ -34,11 +34,11 @@ export default function Header(){
         <header className='header'>
             <div className='header__container'>
                 <div className='header__content'>
-                    <img className='header__logo' src={headerLogo} alt='Logo' title='NetherDay' />
-                    <h2 className='header__title'>NetherDay</h2>
+                    <img className='header__logo' src={headerLogo} alt='Logo' title='NetherDay' onClick={() => window.location.href = '/'} />
+                    <h2 className='header__title' onClick={() => window.location.href = '/'}>NetherDay</h2>
                     <div className='header__nav'>
-                        <a className='header__nav-item' href='#'>Правила</a>
-                        <a className='header__nav-item' href='#'>Пiдтримка</a>
+                        <a className='header__nav-item' href='/rules'>Правила</a>
+                        <a className='header__nav-item' href='https://dsc.gg/netherday' target='_blank'>Пiдтримка</a>
                         <a className='header__nav-item' href='#'>Поповнити баланс</a>
                         <button className='header__nav-item' onClick={() => setIsCartModalOpen(true)} style={{paddingBottom: '0'}}>Корзина</button>
                     </div>

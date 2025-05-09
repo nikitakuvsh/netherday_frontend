@@ -20,12 +20,14 @@
     height: auto;
     object-fit: cover;
     margin-right: 17px;
+    cursor: pointer;
 }
 
 .header__title {
     font-size: 24px;
     margin-right: 78px;
     color: #000000;
+    cursor: pointer;
 }
 
 .header__nav {
