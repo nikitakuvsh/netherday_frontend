@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './main.css';
 import Header from './components/Header/Header';
@@ -9,7 +9,14 @@ import Cart from './components/Cart/Cart';
 import Rules from './components/Rules/Rules';
 
 function App() {
-  const [countNewProductsInCart, setCountNewProductsInCart] = useState(0);
+  const [countNewProductsInCart, setCountNewProductsInCart] = useState(() => {
+    const saved = localStorage.getItem('cartCount');
+    return saved ? parseInt(saved, 10) : 0;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('cartCount', countNewProductsInCart);
+  }, [countNewProductsInCart]);
 
   return (
     <Router>

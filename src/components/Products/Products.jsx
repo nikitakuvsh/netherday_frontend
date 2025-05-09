@@ -1,5 +1,6 @@
 import './Products.css';
 import testImage from '../../images/pictures/main-banner-image.svg';
+import { useState } from 'react';
 
 const sampleProducts = [
     {
@@ -66,6 +67,8 @@ const sampleProducts = [
 ];
 
 export default function Products({ setCountNewProductsInCart }) {
+    const [activeIndex, setActiveIndex] = useState(0);
+
     const handleAddToCart = (product) => {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -80,19 +83,18 @@ export default function Products({ setCountNewProductsInCart }) {
         localStorage.setItem('cart', JSON.stringify(cart));
     };
 
+    const categories = ['Категория 1', 'Категория 2', 'Категория 3', 'Категория 4', 'Категория 5', 'Категория 6', 'Категория 7'];
+
+
     return (
         <div className='products__container'>
             <div className='products__content'>
                 <h2 className='products__block-title'>Каталог товарiв</h2>
                 <div className='product--inline'>
-                    <button className='products__category category--active'>Категория</button>
-                    <button className='products__category'>Категория</button>
-                    <button className='products__category'>Категория</button>
-                    <button className='products__category'>Категория</button>
-                    <button className='products__category'>Категория</button>
-                    <button className='products__category'>Категория</button>
-                    <button className='products__category'>Категория</button>
-                    
+                    {categories.map((category, index) => (
+                        <button key={index} className={`products__category ${activeIndex === index ? 'category--active' : ''}`}
+                            onClick={() => setActiveIndex(index)}>{category}</button>
+                    ))}
                 </div>
                 <div className='products__list'>
                     {sampleProducts.map((product) => (
@@ -106,7 +108,7 @@ export default function Products({ setCountNewProductsInCart }) {
                                     <span className='product__price'>{product.price} грн</span>
                                     <span className='product__count'>{product.count} шт.</span>
                                 </div>
-                                <button className='product__button button--add-to-cart' onClick={() => {handleAddToCart(product); setCountNewProductsInCart();}}>В корзину</button>
+                                <button className='product__button button--add-to-cart' onClick={() => { handleAddToCart(product); setCountNewProductsInCart(); }}>В корзину</button>
                             </div>
                         </div>
                     ))}

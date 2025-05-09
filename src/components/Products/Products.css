@@ -55,12 +55,13 @@
     background: rgba(254, 184, 0, 0.3);
     border: none;
     border-radius: 9px;
-    padding: 10px 55px;
+    padding: 7px 55px;
     margin-right: 8px;
     margin-bottom: 23px;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
-    color: transparent;
+    text-wrap: nowrap;
+    font-size: 12px;
 }
 
 .products__category:hover {
