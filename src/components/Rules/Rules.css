@@ -27,6 +27,26 @@
     text-decoration: none;
     position: absolute;
     left: 0;
+    transition: color 0.3s ease;
+}
+
+.rules__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #FEC000;
+    transition: width 0.3s ease;
+}
+
+.rules__link:hover {
+    color: #d4a000;
+}
+
+.rules__link:hover::after {
+    width: 100%;
 }
 
 .rules__title {
